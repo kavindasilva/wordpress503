@@ -1968,7 +1968,8 @@ ul.owl-carousel {
     top: 100%;
     left: 0;
     width: 250px;
-    background: #ee394a;
+    background: #5d5d5d;
+	background-color: #5d5d5d;
     z-index: 999;
     opacity: 0;
     visibility: hidden;
