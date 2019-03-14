@@ -154,7 +154,6 @@ if( ! function_exists( 'ghumti_header_logo_icons_section_start' ) ) :
 	function ghumti_header_logo_icons_section_start() {
 		echo '<div class="ghumti-logo-section-wrapper">';
 		echo '<div class="at-container">';
-		
 	}
 endif;
 
@@ -166,12 +165,12 @@ endif;
 if( ! function_exists( 'ghumti_logo_left_section' ) ) :
 	function ghumti_logo_left_section() {
 		?>
-		<!--div class="ghumti-logo-left-section-wrapper">
+		<div class="ghumti-logo-left-section-wrapper">
 			<?php
-			/*$ghumti_top_social_option = get_theme_mod( 'ghumti_top_social_option', 'show' );
+			$ghumti_top_social_option = get_theme_mod( 'ghumti_top_social_option', 'show' );
 			if( $ghumti_top_social_option == 'show' ) {
 				ghumti_social_media();
-			}*/
+			}
 			?>
 		</div><!-- .ghumti-top-right-section-wrapper -->
 		<?php
@@ -186,11 +185,11 @@ endif;
 if( ! function_exists( 'ghumti_site_branding_section' ) ) :
 	function ghumti_site_branding_section() {
 		?>
-		<div class="site-branding" style="width:100%">
+		<div class="site-branding">
 			<?php
 			if ( has_custom_logo() ) { ?>
-				<div class="site-logo" style="width:100%">
-					<?php the_custom_logo("X"); ?>
+				<div class="site-logo">
+					<?php the_custom_logo(); ?>
 				</div><!-- .site-logo -->
 				<?php
 			}
@@ -224,13 +223,12 @@ endif;
  *
  * @since 1.0.0
  */
-//if( false ) :
 if( ! function_exists( 'ghumti_logo_right_section' ) ) :
 	function ghumti_logo_right_section() {
 		$ghumti_top_icons_option = get_theme_mod( 'ghumti_top_icons_option', 'show' );
 		if( $ghumti_top_icons_option == 'show' ) {
 			?>
-			<!--div class="ghumti-logo-right-section-wrapper">
+			<div class="ghumti-logo-right-section-wrapper">
 				<div class="my-account">
 					<i class="fa fa-unlock-alt"></i>
 					<div class="welcome-user">
