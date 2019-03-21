@@ -16,7 +16,7 @@
 if( ! function_exists( 'ghumti_top_header_start' ) ) :
 	function ghumti_top_header_start() {
 		echo '<div class="ghumti-top-header-wrap">';
-		echo '<div class="at-container">';
+		echo '<div class="at-container" style="padding-left: 0px; padding-right: 0px;">';
 	}
 endif;
 
@@ -71,7 +71,7 @@ add_action( 'ghumti_top_header', 'ghumti_top_header_end', 25 );
 if( ! function_exists( 'ghumti_ticker_section_start' ) ) :
 	function ghumti_ticker_section_start() {
 		echo '<div class="ghumti-ticker-wrapper">';
-		echo '<div class="at-container">';
+		echo '<div class="at-container" style="padding-left: 0px; padding-right: 0px;">';
 		echo '<div class="ghumti-ticker-block ghumti-clearfix">';
 	}
 endif;
@@ -85,7 +85,7 @@ if( ! function_exists( 'ghumti_ticker_content' ) ) :
 	function ghumti_ticker_content() {
 		$ghumti_ticker_caption = get_theme_mod( 'ghumti_ticker_caption', __( 'Breaking News', 'ghumti' ) );
 		?>
-		<span class="ticker-caption"><?php echo esc_html( $ghumti_ticker_caption ); ?></span>
+		<span style="padding-left:10px" class="ticker-caption" ><?php echo esc_html( $ghumti_ticker_caption ); ?></span>
 		<div class="ticker-content-wrapper">
 			<?php
 			$ghumti_ticker_cat_id = apply_filters( 'ghumti_ticker_cat_id', null );
@@ -152,9 +152,8 @@ endif;
  */
 if( ! function_exists( 'ghumti_header_logo_icons_section_start' ) ) :
 	function ghumti_header_logo_icons_section_start() {
-		echo '<div class="ghumti-logo-section-wrapper">';
-		echo '<div class="at-container">';
-		
+		echo '<div class="ghumti-logo-section-wrapper" style="padding-top: 0px; padding-bottom: 0px;">';
+		echo '<div class="at-container" style="padding-left: 0px;padding-right: 0px;">';
 	}
 endif;
 
@@ -190,7 +189,9 @@ if( ! function_exists( 'ghumti_site_branding_section' ) ) :
 			<?php
 			if ( has_custom_logo() ) { ?>
 				<div class="site-logo" style="width:100%">
-					<?php the_custom_logo("X"); ?>
+					<?php the_custom_logo("X",1,1,1,2); 
+					$reflFunc = new ReflectionFunction('wp_get_attachment_image');
+					//print $reflFunc->getFileName() . ':' . $reflFunc->getStartLine();?>
 				</div><!-- .site-logo -->
 				<?php
 			}
@@ -321,7 +322,7 @@ if( ! function_exists( 'ghumti_primary_menu_section' ) ) :
 		?>
 		<div id="ghumti-menu-wrap" class="ghumti-header-menu-wrapper">
 			<div class="ghumti-header-menu-block-wrap">
-				<div class="at-container">
+				<div class="at-container" style="padding-left: 0px; padding-right: 0px; ">
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<button type="button" class="toggle-btn">
 							<span class="toggle-bar"></span>

@@ -879,6 +879,7 @@ function get_custom_logo( $blog_id = 0 ) {
 		$custom_logo_attr = array(
 			'class'    => 'custom-logo',
 			'itemprop' => 'logo',
+			'style'=>'width:100%',	//ks
 		);
 
 		/*
@@ -902,7 +903,8 @@ function get_custom_logo( $blog_id = 0 ) {
 
 	// If no logo is set but we're in the Customizer, leave a placeholder (needed for the live preview).
 	elseif ( is_customize_preview() ) {
-		$html = sprintf( '<a href="%1$s" class="custom-logo-link" style="display:none;"><img class="custom-logo"/></a>',
+		$html = sprintf( '<a href="%1$s" class="custom-logo-link" style="display:none;"><img class="custom-logo"/></a>', //original
+		//$html = sprintf( '<a href="%1$s" class="custom-logo-link" style="display:none;"><img class="custom-logo" style="width:100%" /></a>',
 			esc_url( home_url( '/' ) )
 		);
 	}
